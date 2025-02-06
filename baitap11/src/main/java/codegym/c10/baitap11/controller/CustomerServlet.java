@@ -2,6 +2,7 @@ package codegym.c10.baitap11.controller;
 
 import codegym.c10.baitap11.model.Customer;
 import codegym.c10.baitap11.service.CustomerImpl;
+import codegym.c10.baitap11.service.CustomerServiceDB;
 import codegym.c10.baitap11.service.ICustomerCRUD;
 
 import javax.servlet.ServletException;
@@ -14,7 +15,7 @@ import java.util.List;
 
 @WebServlet(name = "customer", urlPatterns = "/customers")
 public class CustomerServlet extends HttpServlet {
-    private ICustomerCRUD customerService = new CustomerImpl();
+    private ICustomerCRUD customerService = new CustomerServiceDB();
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
