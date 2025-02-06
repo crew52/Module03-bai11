@@ -44,9 +44,9 @@
 
 <h1 style="text-align: center;">Thêm Mới Khách Hàng</h1>
 
-<form action="customers" method="post">
-    <label for="id">ID khách hàng:</label>
-    <input type="number" id="id" name="id" required>
+<form action="customers?action=create" method="post">
+<%--    <label for="id">ID khách hàng:</label>--%>
+<%--    <input type="number" id="id" name="id" required>--%>
 
     <label for="name">Tên khách hàng:</label>
     <input type="text" id="name" name="name" required>

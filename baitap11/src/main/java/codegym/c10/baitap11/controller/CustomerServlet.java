@@ -118,11 +118,10 @@ public class CustomerServlet extends HttpServlet {
     }
 
     private void createCustomer(HttpServletRequest req, HttpServletResponse resp) throws IOException {
-        int id = Integer.parseInt(req.getParameter("id"));
         String name = req.getParameter("name");
         int age = Integer.parseInt(req.getParameter("age"));
 
-        Customer customer = new Customer(id, name, age);
+        Customer customer = new Customer(name, age);
         customerService.createCustomer(customer);
         resp.sendRedirect(req.getContextPath() + "/customers?action=list");
     }
